@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import daisyui from "daisyui";
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,6 +7,12 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "640px", // mobile devices
+      md: "768px", // tablets
+      lg: "1024px", // laptops
+      xl: "1280px", // large screens
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -15,6 +21,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [daisyui],
 };
 export default config;
